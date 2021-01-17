@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy
-        uses: bulls-and-cows-e1c49@main
+        uses: w9jds/firebase-action@main
         with:
           args: deploy --only hosting
         env:
