@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "bulls-and-cows",
     "ignore": [
       "firebase.json",
       "**/.*",
