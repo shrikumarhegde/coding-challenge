@@ -1,0 +1,31 @@
+.logo {
+  width: 400px;
+  background-color: #ff6600;
+  text-align: center;
+  border-radius: 0px 0 25px 25px;
+  // box-shadow: 0px 3px 2px 0px rgba(0,0,0,0.15);
+}
+
+.intro {
+  padding: 20px 20px;
+  background: #fff;
+  border-radius: 10px;
+
+  .headline {
+    color: #545454;
+    font-weight: bold;
+  }
+
+  ul > li {
+    ont-size: 0.9em;
+    padding: 5px 0;
+    color: #585858;
+    text-align: justify;
+  }
+}
+
+main {
+  padding: 20px 20px;
+  background: #fff;
+  border-radius: 10px;
+}

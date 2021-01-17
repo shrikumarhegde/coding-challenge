@@ -1,0 +1,31 @@
+<form [formGroup]="formGroup" class="form-inline">
+  <button (click)="resetForm()" class="btn btn-link reset">Start over</button>
+  <span class="col">
+    <input
+      class="form-control"
+      type="text"
+      maxlength="4"
+      numbersOnly
+      formControlName="userValue"
+      placeholder="Enter the number"
+    />
+    <br/>
+    <span *ngIf="userValueControl.hasError('notUnique')" class="unique">
+      Enter only unique digits!
+    </span>
+  </span>
+
+    <div class="col-12 mt-3">
+      <button
+      class="btn btn-dark"
+      [disabled]="
+        userValueControl?.value?.length != 4 ||
+        userValueControl.hasError('notUnique')
+      "
+      (click)="updateValue()"
+    >
+      Guess
+    </button>
+    </div>
+
+</form>

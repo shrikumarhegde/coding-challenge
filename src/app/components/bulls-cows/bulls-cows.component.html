@@ -1,0 +1,6 @@
+<app-demo-input
+  (userData)="userInputValue($event)"
+  (resetData)="reset()"
+></app-demo-input>
+<p *ngIf="success" class="success font-weight-light text-success">Congratulations, you won the game!</p>
+<app-history [userHistory]="userHistory"></app-history>

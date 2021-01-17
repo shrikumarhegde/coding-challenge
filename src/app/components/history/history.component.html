@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col">
+    <p class="text-info" *ngIf="userHistory.length > 0">
+      Number of attempt: {{ userHistory.length }}
+    </p>
+    <table class="table mt-4" *ngIf="userHistory.length">
+      <thead>
+        <tr>
+          <th scope="col">Step</th>
+          <th scope="col">Guess</th>
+          <th scope="col">Guess result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of userHistory; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.enteredNumber }}</td>
+          <td>{{ item.count.bulls }} bulls {{ item.count.cows }} cows</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
