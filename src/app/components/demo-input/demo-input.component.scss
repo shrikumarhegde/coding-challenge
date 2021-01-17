@@ -4,12 +4,8 @@ form {
 
 .reset {
   font-size: 0.8em;
-  position: absolute;
-  right: 20px;
-  top: 10px;
   color: #2cbbb5;
-  outline: none;
-  z-index: 999;
+  text-align: right;
 }
 
 
@@ -17,4 +13,8 @@ form {
   // position: absolute;
   font-size: 0.8em;
   color:#a75555;
+}
+
+.align-right {
+  text-align: right;
 }
