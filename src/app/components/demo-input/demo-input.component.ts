@@ -22,7 +22,11 @@ export class DemoInputComponent implements OnInit {
     this.formGroup = this.fb.group({
       userValue: [
         '',
-        [Validators.required, this.uniqueDigitValidator.bind(this)],
+        [
+          Validators.required,
+          Validators.pattern('^[0-9]*$'),
+          this.uniqueDigitValidator.bind(this),
+        ],
       ],
     });
   }
@@ -44,7 +48,7 @@ export class DemoInputComponent implements OnInit {
   updateValue() {
     if (this.userValueControl.value)
       this.userData.emit(this.userValueControl.value);
-      this.formGroup.reset();
+    this.formGroup.reset();
   }
 
   resetForm() {

@@ -16,6 +16,10 @@
     <span *ngIf="userValueControl.hasError('notUnique')" class="unique">
       Enter only unique digits!
     </span>
+
+    <span *ngIf="userValueControl.hasError('pattern')" class="unique">
+      Numbers only!
+    </span>
   </span>
 
     <div class="col-12 mt-3">
@@ -23,7 +27,7 @@
       class="btn btn-dark"
       [disabled]="
         userValueControl?.value?.length != 4 ||
-        userValueControl.hasError('notUnique')
+        userValueControl.invalid
       "
       (click)="updateValue()"
     >

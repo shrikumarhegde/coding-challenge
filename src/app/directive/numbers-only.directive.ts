@@ -8,13 +8,12 @@ export class NumbersOnlyDirective {
 
   constructor(private el: ElementRef) {}
 
-  // Ensure that it is a number and stop the keypress
-  @HostListener('input', ['$event']) onInputChange(event: InputEvent) {
-
-    const initalValue = this.el.nativeElement.value.replace(/[^0-9]*/g, '');;
-    this.el.nativeElement.value = initalValue.replace(/[^0-9]*/g, '');
-    if ( initalValue !== this.el.nativeElement.value) {
-      event.stopPropagation();
+  @HostListener('keydown', ['$event']) onKeyDown(event: KeyboardEvent) {
+    if (this.specialKeys.indexOf(event.key) !== -1) {
+      return;
+    }
+    if (!event.code.includes('Digit')) {
+      event.preventDefault();
     }
   }
 }
