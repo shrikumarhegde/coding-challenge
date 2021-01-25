@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-    <p class="text-info" *ngIf="userHistory.length > 0">
+    <p class="text-info" *ngIf="userHistory && userHistory.length > 0">
       Number of attempt: {{ userHistory.length }}
     </p>
     <table class="table mt-4" *ngIf="userHistory.length">

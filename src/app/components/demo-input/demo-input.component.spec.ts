@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DemoInputComponent } from './demo-input.component';
 
@@ -8,7 +9,8 @@ describe('DemoInputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DemoInputComponent ]
+      declarations: [ DemoInputComponent ],
+      imports: [ReactiveFormsModule, FormsModule]
     })
     .compileComponents();
   });

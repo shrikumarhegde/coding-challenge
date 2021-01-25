@@ -7,7 +7,7 @@ import { HistoryModel } from 'src/app/model/history.model';
   styleUrls: ['./history.component.scss']
 })
 export class HistoryComponent implements OnInit {
-  @Input() userHistory:HistoryModel[];
+  @Input() userHistory:HistoryModel[]=[];
 
   constructor() { }
 
